@@ -1,0 +1,29 @@
+.wadah {
+    height: 500px;
+    display: grid;
+    grid-template-areas:
+        "kiri kanan-atas"
+        "kiri kanan-bawah";
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.kiri {
+    grid-area: kiri;
+    margin: 0;
+    padding: 0;
+}
+
+.kanan-atas {
+    grid-area: kanan-atas;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.kanan-bawah {
+    grid-area: kanan-bawah;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
