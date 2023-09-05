@@ -19,7 +19,7 @@ class TerbitBeritaController extends Controller
 
         return view('berita', [
             'title' => 'Berita Penmad',
-            'berita' => $berita->get()
+            'berita' => $berita->paginate(7)
         ]);
     }
 
