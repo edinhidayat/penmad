@@ -35,6 +35,7 @@
             Request::is('admin/users*') ||
             Request::is('admin/bos*') ||
             Request::is('admin/ta*') ||
+            Request::is('admin/katlap*') ||
             Request::is('admin/pos'))
         <!-- DataTables -->
         <link rel="stylesheet" href="../../../lte/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
@@ -132,6 +133,7 @@
             Request::is('admin/users*') ||
             Request::is('admin/bos*') ||
             Request::is('admin/ta*') ||
+            Request::is('admin/katlap*') ||
             Request::is('admin/pos'))
         <!-- DataTables  & Plugins -->
         <script src="../../../lte/plugins/datatables/jquery.dataTables.min.js"></script>

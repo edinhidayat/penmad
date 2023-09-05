@@ -17,7 +17,7 @@
 
                     <h2>{{ $beritanya->judul }}</h2>
                     <p class="small text-muted"><i class='bx bx-time'></i>
-                        {{ carbon\Carbon::parse($beritanya->created_at)->format('d M Y') }}</p>
+                        {{ carbon\Carbon::parse($beritanya->updated_at)->format('d M Y') }}</p>
                     <img class="img-fluid" src="{{ asset('storage/' . substr($beritanya->gambar, 7)) }}" alt="GambarPos"
                         style="width: 750px;">
                     <div class="mt-4">

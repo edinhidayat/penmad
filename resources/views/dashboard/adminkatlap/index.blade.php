@@ -49,7 +49,7 @@
                     </div>
 
                     <a href="/admin/katlap/create" class="btn btn-primary mb-2"><i class="fas fa-plus"></i> Tambah Data</a>
-                    <table id="example3" class="table table-bordered table-striped bg-light">
+                    <table id="example2" class="table table-bordered table-striped bg-light">
                         <thead>
                             <tr>
                                 <th>No</th>

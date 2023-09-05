@@ -29,7 +29,7 @@
                                 <h3><b>{{ $berita[0]->judul }}</b></h3>
                                 <p class="card-text text-dark">{{ $berita[0]->singkat }}</p>
                                 <p class="card-text text-dark"><small
-                                        class="text-body-secondary">{{ carbon\Carbon::parse($berita[0]->created_at)->format('d M Y') }}</small>
+                                        class="text-body-secondary">{{ carbon\Carbon::parse($berita[0]->updated_at)->format('d M Y') }}</small>
                                 </p>
                             </a>
                         </div>
@@ -50,7 +50,7 @@
                                 </div>
                                 <div class="card-footer">
                                     <small
-                                        class="text-body-secondary">{{ carbon\Carbon::parse($berita[0]->created_at)->format('d M Y') }}</small>
+                                        class="text-body-secondary">{{ carbon\Carbon::parse($item->updated_at)->format('d M Y') }}</small>
                                 </div>
                             </div>
                         </div>

@@ -46,10 +46,10 @@ class AdminLaporanController extends Controller
 
     public function downloadsemua()
     {
-        $zip = new ZipArchive;
-        $filename = "laporan-files.zip";
         $ids = request('ids');
         if ($ids != null) {
+            $zip = new ZipArchive;
+            $filename = "laporan-files.zip";
 
             // $idArray = explode(',', $ids);
             // $dwnlaporan = Laporan::whereIn('id', $idArray)->get();
