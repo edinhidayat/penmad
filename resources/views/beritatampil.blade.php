@@ -16,10 +16,10 @@
                     </div>
 
                     <h2>{{ $beritanya->judul }}</h2>
-                    <p class="small text-muted"><i class='bx bx-time'></i>
-                        {{ carbon\Carbon::parse($beritanya->updated_at)->format('d M Y') }}</p>
+                    <p class="small text-muted"><i class='bx bx-time'></i> {{ carbon\Carbon::parse($beritanya->created_at)->format('d M Y') }} | 
+                        updated : {{ carbon\Carbon::parse($beritanya->updated_at)->format('d M Y') }}</p>
                     <img class="img-fluid" src="{{ asset('storage/' . substr($beritanya->gambar, 7)) }}" alt="GambarPos"
-                        style="width: 750px;">
+                        style="width: 750px; border: 1px solid #b3b3b3; box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); border-radius: 5px;">
                     <div class="mt-4">
                         <p>{!! $beritanya->body !!}</p>
                     </div>

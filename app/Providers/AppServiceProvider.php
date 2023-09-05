@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Models\User;
+use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\ServiceProvider;
 
@@ -25,11 +26,13 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        // Gate::define('admin', function(User $user){
-        //     return $user->akses_id === 1;
-        // });
-        // Gate::define('is_user', function(User $user){
-        //     return $user->akses_id === 2;
-        // });
+        Paginator::useBootstrap();
+        // Paginator::useBootstrapFive();
+        Gate::define('admin', function(User $user){
+            return $user->akses_id === 1;
+        });
+        Gate::define('is_user', function(User $user){
+            return $user->akses_id === 2;
+        });
     }
 }
