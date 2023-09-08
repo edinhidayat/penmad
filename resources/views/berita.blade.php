@@ -25,7 +25,7 @@
                     <div class="berita-satu">
                         <img src="{{ asset('storage/' . substr($berita[0]->gambar, 7)) }}" class="card-img-top gambar-satu" alt="Gambar Pos">
                         <div class="judul-berita p-3">
-                            <a href="/berita/{{ $berita[0]->id }}" class="text-decoration-none warna-judul">
+                            <a href="/berita/{{ $berita[0]->id }}" class="text-decoration-none warna-judul stretched-link">
                                 <h3><b>{{ $berita[0]->judul }}</b></h3>
                                 {{-- <p class="card-text">{{ $berita[0]->singkat }}</p> --}}
                                 <p class="card-text"><small class="text-body-secondary">{{ carbon\Carbon::parse($berita[0]->created_at)->format('d M Y') }}</small></p>
@@ -38,9 +38,11 @@
                     @foreach ($berita->skip(1) as $item)
                         <div class="col">
                             <div class="card berita-lainnya h-100">
-                                <img src="{{ asset('storage/' . substr($item->gambar, 7)) }}" class="card-img-top gambar-dua" alt="Gambar">
-                                <div class="card-body bodi-judul">
-                                    <a href="/berita/{{ $item->id }}" class="text-decoration-none">
+                                <div class="d-flex align-items-center justify-content-center" style="width: 100%;height:150px;overflow:hidden;">
+                                    <img src="{{ asset('storage/' . substr($item->gambar, 7)) }}" class="img-fluid gambar-dua" alt="Gambar">
+                                </div>
+                                <div class="card-body bodi-judul p-2">
+                                    <a href="/berita/{{ $item->id }}" class="text-decoration-none stretched-link">
                                         <h5 class="card-title">{{ $item->judul }}</h5>
                                     </a>
                                 </div>

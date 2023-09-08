@@ -57,14 +57,17 @@ div.berita-lainnya {
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 .gambar-dua {
-    width: 100%;
-    height: 57%;
+    width: 400px;
 }
 .bodi-judul > a > h5 {
     font-size: medium;
-    margin-top: -10px;
+    margin-top: -10px -10px;
 }
 .bodi-judul > a > h5,
 .card-footer > small {
     font-family: var(--poppins);
+}
+
+.beritalainnya {
+    margin-top: 200px;
 }

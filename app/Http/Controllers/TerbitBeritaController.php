@@ -27,7 +27,8 @@ class TerbitBeritaController extends Controller
     {
         return view('beritatampil', [
             'title' => 'Berita Penmad',
-            'beritanya' => Berita::find($id)
+            'beritanya' => Berita::find($id),
+            'beritalain' => Berita::latest()->get()
         ]);
     }
 }
