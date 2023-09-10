@@ -1,10 +1,9 @@
-$(document).ready(function () {
-    $(".menu").addClass("aktif");
-    $("a.nav-link").click(function () {
-        $("a.nav-link").removeClass("aktif");
-        $(this).addClass("aktif");
-    });
-});
+/* 
+================++================
+JavaScript untuk Web Tampilan Baru
+================++================
+*/
+
 window.onscroll = function () {
     scrollNavbar();
 };

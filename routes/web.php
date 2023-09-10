@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
-// use App\Http\Controllers\UtamaController;
 use App\Http\Controllers\DaftarController;
 use App\Http\Controllers\PassuserController;
 use App\Http\Controllers\AdminUserController;
@@ -18,6 +17,7 @@ use App\Http\Controllers\AdminKatlapController;
 use App\Http\Controllers\AdminTaController;
 use App\Http\Controllers\AnggaranBosController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProfilController;
 use App\Http\Controllers\UserDataSiswaController;
 use App\Http\Controllers\TampilMadrasahController;
 use App\Http\Controllers\UserAkreditasiController;
@@ -37,6 +37,10 @@ use App\Http\Controllers\TerbitBeritaController;
 
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/berita', [TerbitBeritaController::class, 'index']);
+Route::get('/profil', [ProfilController::class, 'index']);
+Route::get('/profil/visi', [ProfilController::class, 'visi']);
+Route::get('/profil/team', [ProfilController::class, 'team']);
+Route::get('/profil/job', [ProfilController::class, 'job']);
 Route::get('/berita/{id}', [TerbitBeritaController::class, 'tampilberita']);
 Route::get('/mdr/{madrasah}', [TampilMadrasahController::class, 'tampil']);
 Route::get('/mdr/{madrasah}/{id}', [TampilDetailMadrasahController::class, 'index']);

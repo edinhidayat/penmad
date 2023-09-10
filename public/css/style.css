@@ -2,7 +2,11 @@
 
 :root {
     --poppins: "Poppins", sans-serif;
-    --oranye: rgb(255, 127, 80);
+    --biru: rgb(44, 75, 149);
+    --oren: rgb(228, 150, 2);
+    --merah: rgb(186, 42, 60);
+    --coklat: rgb(191, 84, 13);
+    --bodas: rgb(234, 237, 246);
     --abu: #474747;
 }
 body,
@@ -10,12 +14,12 @@ html {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    background-color: rgb(222, 222, 222);
+    background-color: wheat;
     overflow-x: hidden;
 }
 p {
     font-weight: 400;
-    text-shadow: 1px 0px 2px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
 }
 h1,
 h2,
@@ -25,10 +29,13 @@ h5,
 h6 {
     font-weight: 600;
 }
+.judul-section {
+    color: var(--biru);
+}
 .tombol {
     color: white;
     text-shadow: 1px 1px 2px rgba(255, 127, 80, 0.8);
-    background-image: linear-gradient(to right, orange, rgb(255, 127, 80));
+    background-image: linear-gradient(to bottom, var(--coklat), var(--oren));
 }
 .tombol:hover {
     text-shadow: 1px 1px 2px rgba(255, 127, 80, 0.8);
@@ -39,12 +46,12 @@ h6 {
 .garis-hr {
     margin-top: 0;
     margin-bottom: 30px;
-    border: 1px solid;
+    border: 1px solid var(--biru);
 }
 
 /* NAVBAR */
-nav {
-    background-color: rgba(255, 127, 80, 0.9);
+#nav {
+    background-color: rgba(44, 75, 149, 0.9);
     border-bottom: 1px solid white;
     margin-top: 0;
 }
@@ -65,12 +72,7 @@ a.nav-link.aktif {
 /* HERO */
 #hero {
     position: relative;
-    background-image: linear-gradient(
-        to right,
-        orange,
-        rgb(255, 127, 80),
-        purple
-    );
+    background-image: linear-gradient(to right, var(--oren), var(--merah));
 }
 #hero h1 {
     color: white;
@@ -90,7 +92,9 @@ a.nav-link.aktif {
 /* CLIENTS */
 #clients {
     position: relative;
-    background-color: #c9c9c9;
+    background-color: var(--coklat);
+    border-top: 1px solid var(--bodas);
+    border-bottom: 1px solid var(--bodas);
 }
 .klien {
     display: flex;
@@ -120,7 +124,7 @@ a.nav-link.aktif {
     width: 20em;
     height: 15em;
     overflow: hidden;
-    border-radius: 8px;
+    border-radius: 5px;
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 .berita-kotak {
@@ -143,9 +147,16 @@ a.nav-link.aktif {
 
 /* PELAYANAN */
 #pelayanan {
-    background-color: rgb(73, 73, 73);
+    background-image: linear-gradient(
+        to top left,
+        var(--oren),
+        var(--coklat),
+        var(--merah)
+    );
     margin-bottom: 60px;
     padding: 40px 40px;
+    border-top: 1px solid var(--bodas);
+    border-bottom: 1px solid var(--bodas);
 }
 .pelayanan-item {
     display: flex;
@@ -165,19 +176,32 @@ a.nav-link.aktif {
     transition: 0.5s;
 }
 .pelayanan-box > h1 {
-    color: var(--oranye);
+    color: var(--oren);
 }
-.pelayanan-box > h4,
+.pelayanan-box > h4 {
+    color: var(--biru);
+}
 .pelayanan-box > p {
     color: #474747;
 }
 
-/* MADRASAH */
+/* MADRASAH DAN INFORMASI */
 .accordion-header > button h6 {
-    color: var(--oranye);
+    color: var(--coklat);
 }
 
-/* INFORMASI */
+/* INFORMASI DAN DOWNLOAD */
+.dowin {
+    background-color: transparent;
+    border: 1px solid rgba(44, 75, 149, 0.3);
+}
+.lebih {
+    background-color: transparent;
+    list-style-type: none;
+}
+.dowin a {
+    color: var(--coklat);
+}
 
 /* KONTAK */
 .kontak-alamat {
@@ -190,12 +214,7 @@ a.nav-link.aktif {
 
 /* FOOTER */
 footer {
-    background-image: linear-gradient(
-        to left,
-        rgb(216, 141, 0),
-        rgb(255, 127, 80),
-        purple
-    );
+    background-image: linear-gradient(to left, var(--oren), var(--merah));
     color: white;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
@@ -212,4 +231,39 @@ footer div ul li {
 footer div ul li a {
     text-decoration: none;
     color: white;
+}
+
+/* PROFIL */
+.profil {
+    margin: 2.5em 0;
+}
+.profil h3,
+.profil h4 {
+    text-align: center;
+    text-transform: uppercase;
+}
+.profil h3 {
+    color: var(--biru);
+    margin-bottom: 0;
+}
+.profil h4 {
+    color: var(--coklat);
+    margin-bottom: 0;
+}
+
+.profil-menu {
+    display: flex;
+    justify-content: center;
+}
+.profil-tbl {
+    width: 9rem;
+}
+
+.profil-kotak {
+    border: 1px solid var(--abu);
+    border-radius: 5px;
+    background-color: whitesmoke;
+    padding: 2.5em 1.5em;
+    width: 100%;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }

@@ -1,16 +1,17 @@
-@extends('template')
+@extends('front.template.index')
 @section('konten')
-    <div class="container">
+
+    <div class="container mb-4">
         <div class="row">
-            <div class="col-lg" style="margin-top: 120px;">
+            <div class="col-lg" style="margin-top: 30px;">
 
                 <div class="d-flex justify-content-between mb-2">
-                    <h3>BERITA</h3>
+                    <h3 style="color: var(--biru);"><i class='bx bxs-florist'></i> BERITA</h3>
                     <form action="/berita">
                         <div class="input-group mb-2">
                             <input type="text" class="form-control" placeholder="Cari..." name="cari" id="cari"
                                 value="{{ request('cari') }}">
-                            <button class="btn btn-outline-secondary" type="submit" id="cari">Cari</button>
+                            <button class="btn btn-outline-primary" type="submit" id="cari">Cari</button>
                         </div>
                     </form>
                 </div>
@@ -59,6 +60,7 @@
                 </div>
             </div>
         </div>
-        <hr class="mt-5" style="border: 1px solid">
+        
     </div>
+    
 @endsection

@@ -1,12 +1,19 @@
-@extends('template')
+@extends('front.template.index')
 @section('konten')
+
     <!-- Main content -->
     <div class="container">
+        <div class="row mt-4">
+            <div class="col text-center">
+                <h3 class="mb-0" style="color: var(--biru);text-transform:uppercase;">Daftar {{ $nama }}</h3>
+                <h4 style="color: var(--coklat);text-transform:uppercase;">Kabupaten Majalengka</h4>
+            </div>
+        </div>
         <div class="row">
-            <div class="col" style="margin-top: 110px;">
+            <div class="col mt-3 mb-5">
 
                 <div id="data_madrasah">
-                    <table id="example2" class="table table-bordered table-striped bg-light">
+                    <table id="example1" class="table table-bordered table-striped bg-light">
                         <thead>
                             <tr>
                                 <th>No</th>
@@ -42,4 +49,5 @@
             </div>
         </div>
     </div>
+    
 @endsection
