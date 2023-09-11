@@ -18,8 +18,14 @@
                 <li class="nav-item">
                     <a class="nav-link {{ Request::is('profil*') ? 'aktif' : '' }}" href="/profil">Profil</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link {{ Request::is('informasi*') ? 'aktif' : '' }}" href="/informasi">Informasi</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle {{ Request::is('informasi*') || Request::is('download*') ? 'aktif' : '' }} disabled" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Utility
+                    </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/informasi">Informasi</a></li>
+                            <li><a class="dropdown-item" href="/download">Download</a></li>
+                        </ul>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle {{ Request::is('mdr/*') ? 'aktif' : '' }}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
