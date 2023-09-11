@@ -133,7 +133,7 @@
     <section id="informasi">
         <div class="container mb-5">
             <div class="row">
-                <div class="col-lg-5">
+                <div class="col-lg-4">
                     <h3 class="judul-section"><i class='bx bxs-graduation'></i> Madrasah</h3>
                     <hr class="garis-hr">
 
@@ -230,7 +230,7 @@
                 </div>
 
 
-                <div class="col-lg-7">
+                <div class="col-lg-4">
                     <h3 class="judul-section"><i class='bx bxs-alarm-exclamation'></i> Informasi</h3>
                     <hr class="garis-hr">
 
@@ -250,6 +250,53 @@
                         </div>
                     </div>
                     {{-- Catatan sementara sebelum ada informasi --}}
+
+                    {{-- <div class="row">
+                        <div class="col">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item dowin">
+                                    <a class="text-decoration-none" href="#">
+                                        <i class='bx bxs-right-arrow-circle'></i> Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia maiores libero dolorem!
+                                    </a>
+                                </li>
+                                <li class="list-group-item dowin">
+                                    <a class="text-decoration-none" href="#">
+                                        <i class='bx bxs-right-arrow-circle'></i> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos cumque omnis nulla corrupti minus voluptatibus.
+                                    </a>
+                                </li>
+                                <li class="list-group-item dowin">
+                                    <a class="text-decoration-none" href="#">
+                                        <i class='bx bxs-right-arrow-circle'></i> Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, aliquid.
+                                    </a>
+                                </li>
+                                <li class="list-group-item dowin">
+                                    <a class="text-decoration-none" href="#">
+                                        <i class='bx bxs-right-arrow-circle'></i> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam incidunt deleniti distinctio magnam.
+                                    </a>
+                                </li>
+                                <li class="list-group-item dowin">
+                                    <a class="text-decoration-none" href="#">
+                                        <i class='bx bxs-right-arrow-circle'></i> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis veniam ducimus quae quisquam?
+                                    </a>
+                                </li>
+                                <li class="list-group-item dowin">
+                                    <a class="text-decoration-none" href="#">
+                                        <i class='bx bxs-right-arrow-circle'></i> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, fugit praesentium veniam sit sed harum?
+                                    </a>
+                                </li>
+                                <li class="list-group-item lebih" style="text-align: right;">
+                                    <a class="text-decoration-none" href="/informasi">More... <i class='bx bxs-chevrons-right'></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div> --}}
+
+                </div>
+
+                <div class="col-lg-4">
+                    <h3 class="judul-section"><i class='bx bxs-download'></i> Download</h3>
+                    <hr class="garis-hr">
+
 
                     {{-- <div class="row">
                         <div class="col">

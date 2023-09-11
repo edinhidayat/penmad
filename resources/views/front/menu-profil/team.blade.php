@@ -88,9 +88,9 @@
                 <img src="../../img/team/dwi.jpg" class="card-img-top rounded-circle profil-img" alt="Foto Personil">
             </div>
             <div class="card-body text-center">
-                <h6 class="mb-0">DWI WINARTI</h6>
-                <span>199101012023082002</span>
-                <p>Pengembang Kapasitas Pendidik</p>
+                <h6 class="mb-0">DWI WINARTI, SIP.</h6>
+                <span>199303112023212042</span>
+                <p>JFT Ahli Pertama Pustakawan</p>
             </div>
         </div>        
     </div>
