@@ -36,6 +36,8 @@
             Request::is('admin/bos*') ||
             Request::is('admin/ta*') ||
             Request::is('admin/katlap*') ||
+            Request::is('admin/informasi*') ||
+            Request::is('admin/download*') ||
             Request::is('admin/pos'))
         <!-- DataTables -->
         <link rel="stylesheet" href="../../../lte/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
@@ -43,7 +45,7 @@
         <link rel="stylesheet" href="../../../lte/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
     @endif
 
-    @if (Request::is('admin/pos*'))
+    @if (Request::is('admin/pos*') || Request::is('admin/informasi*'))
         {{-- TRIX EDITOR --}}
         <link rel="stylesheet" type="text/css" href="https://unpkg.com/trix@2.0.0/dist/trix.css">
         <script type="text/javascript" src="https://unpkg.com/trix@2.0.0/dist/trix.umd.min.js"></script>
@@ -134,6 +136,8 @@
             Request::is('admin/bos*') ||
             Request::is('admin/ta*') ||
             Request::is('admin/katlap*') ||
+            Request::is('admin/informasi*') ||
+            Request::is('admin/download*') ||
             Request::is('admin/pos'))
         <!-- DataTables  & Plugins -->
         <script src="../../../lte/plugins/datatables/jquery.dataTables.min.js"></script>
@@ -222,7 +226,7 @@
         })
     </script>
 
-    @if (Request::is('dashboard/laporan*') || Request::is('admin/pos*'))
+    @if (Request::is('dashboard/laporan*') || Request::is('admin/pos*') || Request::is('admin/download*'))
         <!-- bs-custom-file-input -->
         <script src="../../../lte/plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
         <script>

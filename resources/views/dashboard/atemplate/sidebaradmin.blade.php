@@ -28,12 +28,29 @@
             </a>
         </li>
 
-        <li class="nav-header">BERITA</li>
+        <li class="nav-header">PUBLIC</li>
+
         <li class="nav-item">
             <a href="/admin/pos" class="nav-link {{ Request::is('admin/pos*') ? 'active' : '' }}">
                 <i class="nav-icon far fa-newspaper"></i>
                 <p>
-                    Pos
+                    Berita
+                </p>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="/admin/informasi" class="nav-link {{ Request::is('admin/informasi*') ? 'active' : '' }}">
+                <i class="nav-icon fas fa-info-circle"></i> 
+                <p>
+                    Informasi
+                </p>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="/admin/download" class="nav-link {{ Request::is('admin/download*') ? 'active' : '' }}">
+                <i class="nav-icon fas fa-download"></i> 
+                <p>
+                    Download
                 </p>
             </a>
         </li>

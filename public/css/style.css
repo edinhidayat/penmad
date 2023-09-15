@@ -199,6 +199,7 @@ a.nav-link.aktif {
     background-color: transparent;
     list-style-type: none;
 }
+.dowin,
 .dowin a {
     color: var(--coklat);
 }

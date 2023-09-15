@@ -133,6 +133,8 @@
     <section id="informasi">
         <div class="container mb-5">
             <div class="row">
+
+                {{-- DAFTAR MADRASAH --}}
                 <div class="col-lg-4">
                     <h3 class="judul-section"><i class='bx bxs-graduation'></i> Madrasah</h3>
                     <hr class="garis-hr">
@@ -229,116 +231,72 @@
                     </div>
                 </div>
 
-
+                {{-- DAFTAR INFORMASI --}}
                 <div class="col-lg-4">
                     <h3 class="judul-section"><i class='bx bxs-alarm-exclamation'></i> Informasi</h3>
                     <hr class="garis-hr">
 
-                    {{-- Catatan sementara sebelum ada informasi --}}
                     <div class="row">
                         <div class="col">
                             <ul class="list-group list-group-flush">
-                                <li class="list-group-item dowin">
-                                    <a class="text-decoration-none" href="#">
-                                        <i class='bx bxs-right-arrow-circle'></i> Belum ada informasi
-                                    </a>
-                                </li>
-                                <li class="list-group-item lebih" style="text-align: right;">
-                                    <a class="text-decoration-none" href="/informasi">More... <i class='bx bxs-chevrons-right'></i></a>
-                                </li>
+                                @if ($informasi->count())
+                                @foreach ($informasi as $item)
+
+                                {{-- @for ($i = 0; $i < 5; $i++) --}}
+                                    <li class="list-group-item dowin">
+                                        <a class="text-decoration-none" href="/informasi/{{ $item->id }}">
+                                            <i class='bx bxs-right-arrow-circle'></i> {{ $item->judul }}
+                                        </a>
+                                    </li>
+                                {{-- @endfor --}}
+                                
+                                @endforeach
+                                @else
+                                    <li><i class='bx bxs-right-arrow-circle'></i> Informasi Belum tersedia.</li>
+                                @endif
+
                             </ul>
                         </div>
                     </div>
-                    {{-- Catatan sementara sebelum ada informasi --}}
-
-                    {{-- <div class="row">
-                        <div class="col">
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item dowin">
-                                    <a class="text-decoration-none" href="#">
-                                        <i class='bx bxs-right-arrow-circle'></i> Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia maiores libero dolorem!
-                                    </a>
-                                </li>
-                                <li class="list-group-item dowin">
-                                    <a class="text-decoration-none" href="#">
-                                        <i class='bx bxs-right-arrow-circle'></i> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos cumque omnis nulla corrupti minus voluptatibus.
-                                    </a>
-                                </li>
-                                <li class="list-group-item dowin">
-                                    <a class="text-decoration-none" href="#">
-                                        <i class='bx bxs-right-arrow-circle'></i> Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, aliquid.
-                                    </a>
-                                </li>
-                                <li class="list-group-item dowin">
-                                    <a class="text-decoration-none" href="#">
-                                        <i class='bx bxs-right-arrow-circle'></i> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam incidunt deleniti distinctio magnam.
-                                    </a>
-                                </li>
-                                <li class="list-group-item dowin">
-                                    <a class="text-decoration-none" href="#">
-                                        <i class='bx bxs-right-arrow-circle'></i> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis veniam ducimus quae quisquam?
-                                    </a>
-                                </li>
-                                <li class="list-group-item dowin">
-                                    <a class="text-decoration-none" href="#">
-                                        <i class='bx bxs-right-arrow-circle'></i> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, fugit praesentium veniam sit sed harum?
-                                    </a>
-                                </li>
-                                <li class="list-group-item lebih" style="text-align: right;">
-                                    <a class="text-decoration-none" href="/informasi">More... <i class='bx bxs-chevrons-right'></i></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div> --}}
 
                 </div>
 
+                {{-- DAFTAR DOWNLOAD --}}
                 <div class="col-lg-4">
                     <h3 class="judul-section"><i class='bx bxs-download'></i> Download</h3>
                     <hr class="garis-hr">
 
 
-                    {{-- <div class="row">
+                    <div class="row">
                         <div class="col">
                             <ul class="list-group list-group-flush">
+                                @if ($download->count())
+                                @foreach ($download as $item)
+
+                                {{-- @for ($i = 0; $i < 5; $i++) --}}
+
                                 <li class="list-group-item dowin">
-                                    <a class="text-decoration-none" href="#">
-                                        <i class='bx bxs-right-arrow-circle'></i> Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia maiores libero dolorem!
-                                    </a>
+                                    <i class='bx bxs-right-arrow-circle'></i> {{ $item->judul }}
+                                    <form action="/download/{{ $item->id }}" method="post" enctype="multipart/form-data">
+                                        @method('get')
+                                        @csrf
+                                        <button type="submit" class="btn btn-sm btn-primary"><i class='bx bx-download'></i>&nbsp;&nbsp; Download</button>
+                                    </form>
                                 </li>
-                                <li class="list-group-item dowin">
-                                    <a class="text-decoration-none" href="#">
-                                        <i class='bx bxs-right-arrow-circle'></i> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos cumque omnis nulla corrupti minus voluptatibus.
-                                    </a>
-                                </li>
-                                <li class="list-group-item dowin">
-                                    <a class="text-decoration-none" href="#">
-                                        <i class='bx bxs-right-arrow-circle'></i> Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, aliquid.
-                                    </a>
-                                </li>
-                                <li class="list-group-item dowin">
-                                    <a class="text-decoration-none" href="#">
-                                        <i class='bx bxs-right-arrow-circle'></i> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam incidunt deleniti distinctio magnam.
-                                    </a>
-                                </li>
-                                <li class="list-group-item dowin">
-                                    <a class="text-decoration-none" href="#">
-                                        <i class='bx bxs-right-arrow-circle'></i> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis veniam ducimus quae quisquam?
-                                    </a>
-                                </li>
-                                <li class="list-group-item dowin">
-                                    <a class="text-decoration-none" href="#">
-                                        <i class='bx bxs-right-arrow-circle'></i> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, fugit praesentium veniam sit sed harum?
-                                    </a>
-                                </li>
-                                <li class="list-group-item lebih" style="text-align: right;">
-                                    <a class="text-decoration-none" href="/informasi">More... <i class='bx bxs-chevrons-right'></i></a>
-                                </li>
+
+                                {{-- @endfor --}}
+                                
+                                @endforeach
+                                @else
+                                    <li><i class='bx bxs-right-arrow-circle'></i> Data Download Belum tersedia.</li>
+                                @endif
+                                
                             </ul>
                         </div>
-                    </div> --}}
+                    </div>
 
                 </div>
+
             </div>
         </div>
     </section>
