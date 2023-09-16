@@ -19,7 +19,7 @@
                     <a class="nav-link {{ Request::is('profil*') ? 'aktif' : '' }}" href="/profil">Profil</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle {{ Request::is('informasi*') || Request::is('download*') ? 'aktif' : '' }} disabled" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle {{ Request::is('informasi*') || Request::is('download*') ? 'aktif' : '' }}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Utility
                     </a>
                         <ul class="dropdown-menu">

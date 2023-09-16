@@ -43,6 +43,7 @@ Route::get('/', [HomeController::class, 'index']);
 Route::get('/berita', [TerbitBeritaController::class, 'index']);
 Route::get('/profil', [ProfilController::class, 'index']);
 Route::get('/informasi', [InformasiController::class, 'index']);
+Route::get('/informasi/{id}', [InformasiController::class, 'detail']);
 Route::get('/download', [DownloadController::class, 'index']);
 Route::get('/download/{id}', [DownloadController::class, 'download']);
 Route::get('/profil/visi', [ProfilController::class, 'visi']);

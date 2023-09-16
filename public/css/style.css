@@ -268,3 +268,36 @@ footer div ul li a {
     width: 100%;
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
+
+/* INFORMASI */
+.kotak-atas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to top, var(--oren), var(--coklat));
+    height: 10em;
+    width: 100%;
+    box-shadow: 1px 0 2px rgba(0, 0, 0, 0.4);
+}
+h1.info {
+    font-weight: 600;
+    color: var(--biru);
+}
+div > .info-logo {
+    width: 30%;
+}
+tr td h4 {
+    font-weight: 600;
+    margin-bottom: 0;
+    color: var(--biru);
+}
+tr td p {
+    font-weight: 300;
+    color: var(--coklat);
+    text-shadow: 0;
+}
+tr td a span {
+    font-weight: 400;
+    color: var(--abu);
+    text-shadow: 0;
+}

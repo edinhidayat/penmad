@@ -232,7 +232,7 @@
                 </div>
 
                 {{-- DAFTAR INFORMASI --}}
-                <div class="col-lg-4">
+                <div class="col-lg-4 mb-5">
                     <h3 class="judul-section"><i class='bx bxs-alarm-exclamation'></i> Informasi</h3>
                     <hr class="garis-hr">
 
@@ -275,12 +275,14 @@
 
                                 {{-- @for ($i = 0; $i < 5; $i++) --}}
 
-                                <li class="list-group-item dowin">
-                                    <i class='bx bxs-right-arrow-circle'></i> {{ $item->judul }}
+                                <li class="list-group-item dowin d-flex justify-content-between">
+                                    <div>
+                                        <i class='bx bxs-right-arrow-circle'></i> {{ $item->judul }}
+                                    </div>
                                     <form action="/download/{{ $item->id }}" method="post" enctype="multipart/form-data">
                                         @method('get')
                                         @csrf
-                                        <button type="submit" class="btn btn-sm btn-primary"><i class='bx bx-download'></i>&nbsp;&nbsp; Download</button>
+                                        <button type="submit" class="btn btn-sm btn-outline-danger"><i class='bx bx-download'></i>&nbsp; Unduh</button>
                                     </form>
                                 </li>
 
