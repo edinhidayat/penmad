@@ -1,0 +1,303 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
+:root {
+    --poppins: "Poppins", sans-serif;
+    --biru: rgb(44, 75, 149);
+    --oren: rgb(228, 150, 2);
+    --merah: rgb(186, 42, 60);
+    --coklat: rgb(191, 84, 13);
+    --bodas: rgb(234, 237, 246);
+    --abu: #474747;
+}
+body,
+html {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: wheat;
+    overflow-x: hidden;
+}
+p {
+    font-weight: 400;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 600;
+}
+.judul-section {
+    color: var(--biru);
+}
+.tombol {
+    color: white;
+    text-shadow: 1px 1px 2px rgba(255, 127, 80, 0.8);
+    background-image: linear-gradient(to bottom, var(--coklat), var(--oren));
+}
+.tombol:hover {
+    text-shadow: 1px 1px 2px rgba(255, 127, 80, 0.8);
+    color: yellow;
+    border: 1px solid red;
+    box-shadow: 0px 0 3px rgba(255, 0, 0, 0.8);
+}
+.garis-hr {
+    margin-top: 0;
+    margin-bottom: 30px;
+    border: 1px solid var(--biru);
+}
+
+/* NAVBAR */
+#nav {
+    background-color: rgba(44, 75, 149, 0.9);
+    border-bottom: 1px solid white;
+    margin-top: 0;
+}
+.nav-item > a {
+    font-weight: 400;
+    color: white;
+}
+a.nav-link.aktif {
+    color: yellow !important;
+}
+.navbar .navbar-nav .nav-link:hover {
+    color: blue;
+}
+.navbar .navbar-nav .nav-item {
+    margin: 0 1em;
+}
+
+/* HERO */
+#hero {
+    position: relative;
+    background-image: linear-gradient(to right, var(--oren), var(--merah));
+}
+#hero h1 {
+    color: white;
+    text-shadow: 1px 1px 3px rgba(255, 127, 80, 0.8);
+}
+#hero h4 {
+    color: yellow;
+    text-shadow: 1px 1px 2px rgba(255, 127, 80, 0.8);
+}
+
+@media (max-width: 991.98px) {
+    .img-hero {
+        display: none;
+    }
+}
+
+/* CLIENTS */
+#clients {
+    position: relative;
+    background-color: var(--coklat);
+    border-top: 1px solid var(--bodas);
+    border-bottom: 1px solid var(--bodas);
+}
+.klien {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 15px;
+}
+.klien-icon {
+    padding: 10px;
+    transition: 0.3s;
+}
+.klien-icon:hover {
+    border: 1px solid rgb(255, 255, 255);
+    background-color: #a7a7a7;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    transition: 0.5s;
+}
+.klien-sub {
+    height: 2.5em;
+}
+
+/* BERITA */
+.berita-ref {
+    position: relative;
+    width: 20em;
+    height: 15em;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+.berita-kotak {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.berita-kotak img {
+    transform: scale(2);
+}
+.berita-judul {
+    position: absolute;
+    padding: 5px;
+    padding-bottom: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* PELAYANAN */
+#pelayanan {
+    background-image: linear-gradient(
+        to top left,
+        var(--oren),
+        var(--coklat),
+        var(--merah)
+    );
+    margin-bottom: 60px;
+    padding: 40px 40px;
+    border-top: 1px solid var(--bodas);
+    border-bottom: 1px solid var(--bodas);
+}
+.pelayanan-item {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.pelayanan-box {
+    background-color: white;
+    width: 17em;
+    height: 18em;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+    border-radius: 7px;
+    transition: 0.3s;
+}
+.pelayanan-box:hover {
+    transform: translateY(-7px);
+    transition: 0.5s;
+}
+.pelayanan-box > h1 {
+    color: var(--oren);
+}
+.pelayanan-box > h4 {
+    color: var(--biru);
+}
+.pelayanan-box > p {
+    color: #474747;
+}
+
+/* MADRASAH DAN INFORMASI */
+.accordion-header > button h6 {
+    color: var(--coklat);
+}
+
+/* INFORMASI DAN DOWNLOAD */
+.dowin {
+    background-color: transparent;
+    border: 1px solid rgba(44, 75, 149, 0.3);
+}
+.lebih {
+    background-color: transparent;
+    list-style-type: none;
+}
+.dowin,
+.dowin a {
+    color: var(--coklat);
+}
+
+/* KONTAK */
+.kontak-alamat {
+    list-style-type: none;
+    margin-bottom: 20px;
+}
+.kontak-alamat h6 {
+    color: #474747;
+}
+
+/* FOOTER */
+footer {
+    background-image: linear-gradient(to left, var(--oren), var(--merah));
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+    padding: 30px 5px 0 5px;
+}
+footer div.link {
+    margin-top: 2em;
+    padding-left: 3em;
+}
+footer div ul li {
+    list-style-type: none;
+    margin-left: -2.2em;
+}
+footer div ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+/* PROFIL */
+.profil {
+    margin: 2.5em 0;
+}
+.profil h3,
+.profil h4 {
+    text-align: center;
+    text-transform: uppercase;
+}
+.profil h3 {
+    color: var(--biru);
+    margin-bottom: 0;
+}
+.profil h4 {
+    color: var(--coklat);
+    margin-bottom: 0;
+}
+
+.profil-menu {
+    display: flex;
+    justify-content: center;
+}
+.profil-tbl {
+    width: 9rem;
+}
+
+.profil-kotak {
+    border: 1px solid var(--abu);
+    border-radius: 5px;
+    background-color: whitesmoke;
+    padding: 2.5em 1.5em;
+    width: 100%;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* INFORMASI */
+.kotak-atas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to top, var(--oren), var(--coklat));
+    height: 10em;
+    width: 100%;
+    box-shadow: 1px 0 2px rgba(0, 0, 0, 0.4);
+}
+h1.info {
+    font-weight: 600;
+    color: var(--biru);
+}
+div > .info-logo {
+    width: 30%;
+}
+tr td h4 {
+    font-weight: 600;
+    margin-bottom: 0;
+    color: var(--biru);
+}
+tr td p {
+    font-weight: 300;
+    color: var(--coklat);
+    text-shadow: 0;
+}
+tr td a span {
+    font-weight: 400;
+    color: var(--abu);
+    text-shadow: 0;
+}

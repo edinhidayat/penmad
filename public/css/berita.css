@@ -8,9 +8,6 @@
     margin: 0;
     box-sizing: border-box;
 }
-body {
-    background-color: whitesmoke;
-}
 .papan-berita {
     background-color: aliceblue;
     border-radius: 7px;

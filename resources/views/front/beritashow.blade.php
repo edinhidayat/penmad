@@ -1,9 +1,10 @@
-@extends('template')
+@extends('front.template.index')
 @section('konten')
-    <div class="container">
+
+    <div class="container mb-4">
         <div class="row">
             
-            <div class="col-lg" style="margin-top: 110px;">
+            <div class="col-lg" style="margin-top: 30px;">
                 <div class="mb-4">
                     <nav aria-label="breadcrumb bg-white">
                         <ol class="breadcrumb">
@@ -20,7 +21,7 @@
             <div class="col-lg-8 mb-5">
 
                 @if ($beritanya->status == 'Terbit')
-                    <h2>{{ $beritanya->judul }}</h2>
+                    <h2 style="color:var(--coklat);">{{ $beritanya->judul }}</h2>
                     <p class="small text-muted"><i class='bx bx-time'></i> {{ carbon\Carbon::parse($beritanya->created_at)->format('d M Y') }} | 
                         updated : {{ carbon\Carbon::parse($beritanya->updated_at)->format('d M Y') }}</p>
                     <img class="img-fluid" src="{{ asset('storage/' . substr($beritanya->gambar, 7)) }}" alt="GambarPos"
@@ -46,22 +47,22 @@
             </div>
 
             <div class="col-lg-4">
-                <h4>Lainnya</h4>
+                <h4 style="color: var(--biru);"><i class='bx bxs-news'></i> Berita Lainnya</h4>
                 <hr class="mt-0" style="border: 1px solid">
                 <div class="kolomberita mt-4 mx-2">
                     @if ($beritalain->count())
                         @for ($i = 0; $i < 6; $i++)   
-                            <div class="card mb-3" style="max-width: 540px; height:80px;">
+                            <div class="card mb-3" style="max-width: 540px; height:90px; overflow:hidden;">
                                 <div class="row g-0">
                                     <div class="col-4">
-                                        <div class="d-flex align-items-center justify-content-center" style="height: 80px;width:100%;overflow:hidden;">
+                                        <div class="d-flex align-items-center justify-content-center" style="height: 90px;width:100%;overflow:hidden;">
                                             <img src="{{ asset('storage/' . substr($beritalain[$i]->gambar, 7)) }}" class="img-fluid rounded-start" alt="Berita Lainnya" style="transform: scale(1.6)">
                                         </div>
                                     </div>
-                                    <div class="col-8">
-                                        <div class="card-body py-2 ps-0 pe-2">
-                                            <p class="card-text" style="font-size: 11px;">
-                                                <a href="/berita/{{ $beritalain[$i]->id }}" class="text-decoration-none stretched-link text-dark">
+                                    <div class="col-8" style="background-color: var(--bodas);">
+                                        <div class="card-body py-2 ps-2">
+                                            <p class="card-text" style="font-size: 12px;">
+                                                <a href="/berita/{{ $beritalain[$i]->id }}" class="text-decoration-none stretched-link" style="color:var(--coklat);">
                                                     {{ $beritalain[$i]->judul }}
                                                 </a>
                                             </p>
@@ -74,6 +75,7 @@
                 </div>
             </div>
         </div>
-        <hr class="mt-5" style="border: 1px solid">
+       
     </div>
+
 @endsection

@@ -2,13 +2,14 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
-use App\Http\Controllers\UtamaController;
 use App\Http\Controllers\DaftarController;
 use App\Http\Controllers\PassuserController;
 use App\Http\Controllers\AdminUserController;
 use App\Http\Controllers\Dashboard1Controller;
 use App\Http\Controllers\UserProfilController;
 use App\Http\Controllers\AdminBeritaController;
+use App\Http\Controllers\AdminDownloadController;
+use App\Http\Controllers\AdminInformasiController;
 use App\Http\Controllers\UserLaporanController;
 use App\Http\Controllers\UserSarprasController;
 use App\Http\Controllers\AdminLaporanController;
@@ -17,6 +18,10 @@ use App\Http\Controllers\AdministratorController;
 use App\Http\Controllers\AdminKatlapController;
 use App\Http\Controllers\AdminTaController;
 use App\Http\Controllers\AnggaranBosController;
+use App\Http\Controllers\DownloadController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\InformasiController;
+use App\Http\Controllers\ProfilController;
 use App\Http\Controllers\UserDataSiswaController;
 use App\Http\Controllers\TampilMadrasahController;
 use App\Http\Controllers\UserAkreditasiController;
@@ -34,8 +39,16 @@ use App\Http\Controllers\TerbitBeritaController;
 |
 */
 
-Route::get('/', [UtamaController::class, 'index']);
+Route::get('/', [HomeController::class, 'index']);
 Route::get('/berita', [TerbitBeritaController::class, 'index']);
+Route::get('/profil', [ProfilController::class, 'index']);
+Route::get('/informasi', [InformasiController::class, 'index']);
+Route::get('/informasi/{id}', [InformasiController::class, 'detail']);
+Route::get('/download', [DownloadController::class, 'index']);
+Route::get('/download/{id}', [DownloadController::class, 'download']);
+Route::get('/profil/visi', [ProfilController::class, 'visi']);
+Route::get('/profil/team', [ProfilController::class, 'team']);
+Route::get('/profil/job', [ProfilController::class, 'job']);
 Route::get('/berita/{id}', [TerbitBeritaController::class, 'tampilberita']);
 Route::get('/mdr/{madrasah}', [TampilMadrasahController::class, 'tampil']);
 Route::get('/mdr/{madrasah}/{id}', [TampilDetailMadrasahController::class, 'index']);
@@ -68,3 +81,5 @@ Route::resource('/admin/pos', AdminBeritaController::class)->middleware('auth');
 Route::resource('/admin/users', AdminUserController::class)->middleware('auth');
 Route::resource('/admin/ta', AdminTaController::class)->middleware('auth');
 Route::resource('/admin/katlap', AdminKatlapController::class)->middleware('auth');
+Route::resource('/admin/informasi', AdminInformasiController::class)->middleware('auth');
+Route::resource('/admin/download', AdminDownloadController::class)->middleware('auth');

@@ -1,5 +1,5 @@
 <!-- Main Sidebar Container -->
-<aside class="main-sidebar sidebar-dark-primary elevation-4">
+<aside class="main-sidebar sidebar-dark-info elevation-4">
   <!-- Brand Logo -->
   <a href="/dashboard" class="brand-link">
     <img src="../../../img/logokemenag.png" alt="Logo Kemenag" class="brand-image elevation-2" style="opacity: .8">
@@ -9,14 +9,14 @@
   <!-- Sidebar -->
   <div class="sidebar">
     <!-- Sidebar user panel (optional) -->
-    <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-      {{-- <div class="image">
+    {{-- <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+      <div class="image">
           <img src="img/logokemenag.png" class="img-circle elevation-2" alt="User Image">
-        </div> --}}
+        </div>
       <div class="info">
         <a href="/dashboard" class="d-block">{{ Auth::user()->madrasah->namamadrasah }}</a>
       </div>
-    </div>
+    </div> --}}
 
     @if(Auth::user()->akses_id == 2)
     <!-- Sidebar Menu -->

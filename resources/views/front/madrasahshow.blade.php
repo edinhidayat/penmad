@@ -1,9 +1,10 @@
-@extends('template')
+@extends('front.template.index')
 @section('konten')
+
     <!-- Main content -->
     <div class="container">
         <div class="row">
-            <div class="col" style="margin-top: 110px;">
+            <div class="col mt-4">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a class="text-decoration-none"
@@ -188,7 +189,7 @@
                 </div>
 
                 {{-- DATA SARPRAS --}}
-                <div class="card mt-3">
+                <div class="card mt-3 mb-4">
                     <h5 class="card-header bg-warning"><b>Data Sarana dan Prasarana</b></h5>
                     <div class="card-body">
                         <table id="example2" class="table table-bordered table-striped bg-light">
@@ -226,5 +227,6 @@
         </div>
     </div>
 
-    <script src="js/tampilsiswa.js"></script>
+    <script src="../../js/tampilsiswa.js"></script>
+
 @endsection

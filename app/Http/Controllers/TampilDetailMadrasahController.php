@@ -13,7 +13,7 @@ class TampilDetailMadrasahController extends Controller
 {
     public function index($madrasah, $id)
     {
-        return view('detail', [
+        return view('front.madrasahshow', [
             'title' => 'Dashboard | SiPenmad',
             'dtmadrasah' => Madrasah::find($id),
             'akreditasi' => Akreditasi::orderby('tahun', 'desc')->orderby('id', 'desc')->where('madrasah_id', $id)->get(),
@@ -27,7 +27,7 @@ class TampilDetailMadrasahController extends Controller
 
     public function tabelsiswa($id, $tahun = null)
     {
-        return view('tabelsiswa', [
+        return view('front.tabelsiswa', [
             'title' => 'Dashboard | SiPenmad',
             'datasiswa' => Siswa::where('tahunajaran_id', $tahun)->where('madrasah_id', $id)->with(['madrasah', 'tahunajaran'])->get()
         ]);

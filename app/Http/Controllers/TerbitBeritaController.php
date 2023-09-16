@@ -17,7 +17,7 @@ class TerbitBeritaController extends Controller
                 ->orWhere('body', 'like', '%' . request('cari') . '%');
         }
 
-        return view('berita', [
+        return view('front.berita', [
             'title' => 'Berita Penmad',
             'berita' => $berita->paginate(7)
         ]);
@@ -25,7 +25,7 @@ class TerbitBeritaController extends Controller
 
     public function tampilberita($id)
     {
-        return view('beritatampil', [
+        return view('front.beritashow', [
             'title' => 'Berita Penmad',
             'beritanya' => Berita::find($id),
             'beritalain' => Berita::latest()->get()
