@@ -22,7 +22,7 @@
                     <tbody>
                         @foreach ($informasi as $item)  
                         <tr>
-                            <td>{{ $loop->iteration }}</td>
+                            <td>{{ $loop->iteration + (($informasi->currentPage() -1) * $informasi->perPage()) }}</td>
                             <td><a href="/informasi/{{ $item->id }}" class="text-decoration-none">
                                     <span>Tanggal : {{ carbon\Carbon::parse($item->created_at)->format('d F Y') }}</span><br>
                                     <h4>{{ $item->judul }}</h4>
@@ -33,6 +33,10 @@
                         @endforeach
                     </tbody>
                 </table>
+
+                <div class="d-flex justify-content-end mt-4">
+                    {{ $informasi->links() }}
+                </div>
             </div>
         </div>
     </div>

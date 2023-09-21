@@ -239,30 +239,39 @@
                     <div class="row">
                         <div class="col">
                             <ul class="list-group list-group-flush">
-                                @if ($informasi->count())
-                                @foreach ($informasi as $item)
+                                @if ($informasi->count() <= 7)
+                                    @foreach ($informasi as $item)
+                                        <li class="list-group-item dowin">
+                                            <a class="text-decoration-none" href="/informasi/{{ $item->id }}">
+                                                <i class='bx bxs-right-arrow-circle'></i> {{ $item->judul }}
+                                            </a>
+                                        </li>
+                                    @endforeach
 
-                                {{-- @for ($i = 0; $i < 5; $i++) --}}
-                                    <li class="list-group-item dowin">
-                                        <a class="text-decoration-none" href="/informasi/{{ $item->id }}">
-                                            <i class='bx bxs-right-arrow-circle'></i> {{ $item->judul }}
-                                        </a>
-                                    </li>
-                                {{-- @endfor --}}
-                                
-                                @endforeach
+                                @elseif($informasi->count() > 7)
+                                    @for ($i = 0; $i < 7; $i++)
+                                        <li class="list-group-item dowin">
+                                            <a class="text-decoration-none" href="/informasi/{{ $informasi[$i]->id }}">
+                                                <i class='bx bxs-right-arrow-circle'></i> {{ $informasi[$i]->judul }}
+                                            </a>
+                                        </li>
+                                    @endfor
+
                                 @else
                                     <li><i class='bx bxs-right-arrow-circle'></i> Informasi Belum tersedia.</li>
                                 @endif
 
                             </ul>
+                            <div class="d-flex justify-content-center mt-3">
+                                <a class="btn tombol" href="/informasi">Selengkapnya</a>
+                            </div>
                         </div>
                     </div>
 
                 </div>
 
                 {{-- DAFTAR DOWNLOAD --}}
-                <div class="col-lg-4">
+                <div class="col-lg-4 mb-5">
                     <h3 class="judul-section"><i class='bx bxs-download'></i> Download</h3>
                     <hr class="garis-hr">
 
@@ -270,30 +279,43 @@
                     <div class="row">
                         <div class="col">
                             <ul class="list-group list-group-flush">
-                                @if ($download->count())
+                                @if ($download->count() <= 6)
                                 @foreach ($download as $item)
-
-                                {{-- @for ($i = 0; $i < 5; $i++) --}}
-
-                                <li class="list-group-item dowin d-flex justify-content-between">
-                                    <div>
-                                        <i class='bx bxs-right-arrow-circle'></i> {{ $item->judul }}
-                                    </div>
-                                    <form action="/download/{{ $item->id }}" method="post" enctype="multipart/form-data">
-                                        @method('get')
-                                        @csrf
-                                        <button type="submit" class="btn btn-sm btn-outline-danger"><i class='bx bx-download'></i>&nbsp; Unduh</button>
-                                    </form>
-                                </li>
-
-                                {{-- @endfor --}}
-                                
+                                    <li class="list-group-item dowin d-flex justify-content-between">
+                                        <div>
+                                            <i class='bx bxs-right-arrow-circle'></i> {{ $item->judul }}
+                                        </div>
+                                        <form action="/download/{{ $item->id }}" method="post" enctype="multipart/form-data">
+                                            @method('get')
+                                            @csrf
+                                            <button type="submit" class="btn btn-sm btn-outline-danger"><i class='bx bx-download'></i>&nbsp; Unduh</button>
+                                        </form>
+                                    </li>            
                                 @endforeach
+
+                                @elseif ($download->count() > 6)
+
+                                @for ($i = 0; $i < 6; $i++)
+                                    <li class="list-group-item dowin d-flex justify-content-between">
+                                        <div>
+                                            <i class='bx bxs-right-arrow-circle'></i> {{ $download[$i]->judul }}
+                                        </div>
+                                        <form action="/download/{{ $download[$i]->id }}" method="post" enctype="multipart/form-data">
+                                            @method('get')
+                                            @csrf
+                                            <button type="submit" class="btn btn-sm btn-outline-danger"><i class='bx bx-download'></i>&nbsp; Unduh</button>
+                                        </form>
+                                    </li>
+                                @endfor
+                                
                                 @else
                                     <li><i class='bx bxs-right-arrow-circle'></i> Data Download Belum tersedia.</li>
                                 @endif
                                 
                             </ul>
+                            <div class="d-flex justify-content-center mt-3">
+                                <a class="btn tombol" href="/download">Selengkapnya</a>
+                            </div>
                         </div>
                     </div>
 
