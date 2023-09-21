@@ -11,7 +11,7 @@ class InformasiController extends Controller
     {
         return view('front.informasi',[
             'title' => 'Informasi Penmad',
-            'informasi' => informasi::latest()->get()
+            'informasi' => informasi::latest()->paginate(10)
         ]);
     }
 

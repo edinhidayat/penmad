@@ -11,7 +11,7 @@ class DownloadController extends Controller
     {
         return view('front.download',[
             'title' => 'Download Penmad',
-            'download' => Download::latest()->get()
+            'download' => Download::latest()->paginate(10)
         ]);
     }
 
